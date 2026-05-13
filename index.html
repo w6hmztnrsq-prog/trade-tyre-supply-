@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trade Tyre Supply — West London trade tyre supplier based in Acton W3. Quality used tyres and selected new tyres for mobile tyre fitters, garages, recovery drivers and roadside services. Fast collection, out-of-hours availability. WhatsApp +447440291715">
+    <meta name="keywords" content="trade tyre supply London, mobile tyre fitter tyre supplier, used tyres for trade, out-of-hours tyre supply, tyre collection Acton West London, trade tyre stock, used and new tyre supply London W3">
+    <meta name="robots" content="index, follow">
+    <title>Trade Tyre Supply | West London Trade Tyre Supplier — Acton W3</title>
+    <meta property="og:title" content="Trade Tyre Supply — West London, Acton W3">
+    <meta property="og:description" content="Quality used tyres for mobile fitters, garages and trade. Fast collection, out-of-hours service. WhatsApp +447440291715">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        :root{
+            --bg:#0d0d0d;--bg2:#111111;--card:#181818;--border:#242424;
+            --accent:#f97316;--accent-l:#fb923c;--accent-glow:rgba(249,115,22,0.18);
+            --wapp:#25d366;--white:#ffffff;--grey:#888888;--grey-l:#b0b0b0;
+            --font-h:'Barlow Condensed',sans-serif;--font-b:'Inter',sans-serif;
+        }
+        html{scroll-behavior:smooth}
+        body{background:var(--bg);color:var(--white);font-family:var(--font-b);line-height:1.6;overflow-x:hidden}
+        ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px}
+
+        /* ---- BUTTONS ---- */
+        .btn{
+            display:inline-flex;align-items:center;gap:8px;
+            font-family:var(--font-h);font-weight:700;font-size:15px;
+            letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
+            padding:11px 22px;border-radius:3px;transition:all .18s ease;
+            cursor:pointer;border:none;outline:none;white-space:nowrap;line-height:1;
+        }
+        .btn-wapp{background:var(--wapp);color:#000}
+        .btn-wapp:hover{background:#20bd5a;transform:translateY(-1px);box-shadow:0 6px 24px rgba(37,211,102,.3)}
+        .btn-call-discreet{
+            background:transparent;color:#666;border:1px solid #2a2a2a;
+            font-size:12px;padding:8px 14px;letter-spacing:.08em;
+        }
+        .btn-call-discreet:hover{color:var(--white);border-color:#444}
+        .btn-ghost{background:transparent;color:#777;border:1px solid #2c2c2c}
+        .btn-ghost:hover{border-color:#555;color:var(--grey-l)}
+        .btn-lg{font-size:17px;padding:15px 30px}
+        .btn-xl{font-size:20px;padding:19px 42px}
+
+        /* ---- NAV ---- */
+        .nav{
+            position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;
+            background:rgba(10,10,10,.96);backdrop-filter:blur(14px);
+            border-bottom:1px solid var(--border);padding:0 24px;
+            display:flex;align-items:center;justify-content:space-between;
+        }
+        .nav-logo{
+            font-family:var(--font-h);font-weight:900;font-size:19px;
+            letter-spacing:.06em;text-transform:uppercase;color:var(--white);text-decoration:none;
+        }
+        .nav-logo em{color:var(--accent);font-style:normal}
+        .nav-right{display:flex;gap:10px;align-items:center}
+        .nav-location{
+            font-family:var(--font-h);font-size:12px;font-weight:600;letter-spacing:.1em;
+            text-transform:uppercase;color:#444;display:none;
+        }
+        @media(min-width:640px){.nav-location{display:block}}
+
+        /* ---- TICKER ---- */
+        .ticker{background:var(--accent);padding:9px 0;overflow:hidden;white-space:nowrap;margin-top:62px}
+        .ticker-inner{display:inline-block;animation:tick 35s linear infinite}
+        .ticker-item{
+            display:inline-block;padding:0 44px;
+            font-family:var(--font-h);font-weight:800;font-size:13px;
+            text-transform:uppercase;letter-spacing:.1em;color:#000;
+        }
+        .ticker-item::after{content:'●';margin-left:44px;opacity:.4}
+        @keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+        /* ---- HERO ---- */
+        .hero{
+            min-height:100vh;display:flex;align-items:center;
+            padding:60px 24px 80px;position:relative;overflow:hidden;
+        }
+        .hero-bg{
+            position:absolute;inset:0;
+            background:
+                radial-gradient(ellipse 70% 70% at 68% 50%,rgba(249,115,22,.07) 0%,transparent 65%),
+                radial-gradient(ellipse 40% 50% at 15% 80%,rgba(249,115,22,.04) 0%,transparent 55%),
+                linear-gradient(180deg,#0d0d0d 0%,#0f0f0f 100%);
+        }
+        .hero-grid{
+            position:absolute;inset:0;
+            background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+            background-size:52px 52px;
+        }
+        .hero-inner{
+            max-width:1200px;margin:0 auto;width:100%;
+            display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+            position:relative;z-index:1;
+        }
+        .hero-badge{
+            display:inline-flex;align-items:center;gap:8px;
+            background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.28);
+            color:var(--accent);font-family:var(--font-h);font-weight:700;font-size:12px;
+            letter-spacing:.12em;text-transform:uppercase;padding:6px 14px;border-radius:2px;
+            margin-bottom:22px;
+        }
+        .hero-badge::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
+        @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+        .hero-h1{
+            font-family:var(--font-h);font-weight:900;
+            font-size:clamp(44px,5.2vw,74px);line-height:.97;
+            letter-spacing:-.01em;text-transform:uppercase;margin-bottom:20px;
+        }
+        .hero-h1 em{color:var(--accent);font-style:normal}
+        .hero-sub{font-size:16px;color:var(--grey-l);line-height:1.72;margin-bottom:32px;max-width:480px}
+        .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:40px}
+        .hero-stats{display:flex;gap:36px;padding-top:30px;border-top:1px solid var(--border)}
+        .stat-val{font-family:var(--font-h);font-weight:900;font-size:30px;color:var(--accent);line-height:1}
+        .stat-lbl{font-size:11px;color:var(--grey);text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
+
+        /* ---- TYRE ---- */
+        .tyre-wrap{display:flex;justify-content:center;align-items:center;position:relative}
+        .tyre-container{position:relative;width:100%;max-width:480px;aspect-ratio:1}
+        .tyre-glow{
+            position:absolute;inset:-25%;pointer-events:none;
+            background:radial-gradient(ellipse at center,rgba(249,115,22,.1) 0%,transparent 68%);
+        }
+        #tyreCanvas{width:100%;height:100%;display:block}
+        .scroll-hint{
+            position:absolute;bottom:-24px;left:50%;transform:translateX(-50%);
+            font-family:var(--font-h);font-size:10px;font-weight:700;
+            letter-spacing:.14em;text-transform:uppercase;color:#444;
+        }
+
+        /* ---- SECTIONS ---- */
+        .section{padding:96px 24px}
+        .s-inner{max-width:1200px;margin:0 auto}
+        .s-label{font-family:var(--font-h);font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+        .s-title{font-family:var(--font-h);font-weight:900;font-size:clamp(36px,4vw,60px);text-transform:uppercase;letter-spacing:-.01em;line-height:1;margin-bottom:14px}
+        .s-sub{font-size:15px;color:var(--grey-l);max-width:540px;line-height:1.72}
+        .s-hdr{margin-bottom:56px}
+
+        /* ---- HOW IT WORKS ---- */
+        .how{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+        .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+        .step{background:var(--card);padding:44px 32px;position:relative;transition:background .2s}
+        .step:hover{background:#1d1d1d}
+        .step-n{font-family:var(--font-h);font-weight:900;font-size:90px;color:rgba(249,115,22,.06);line-height:1;position:absolute;top:16px;right:20px;user-select:none;pointer-events:none}
+        .step-ico{width:50px;height:50px;background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px}
+        .step-lbl{font-family:var(--font-h);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+        .step-title{font-family:var(--font-h);font-weight:800;font-size:24px;text-transform:uppercase;margin-bottom:10px;line-height:1.1}
+        .step-desc{font-size:13.5px;color:var(--grey-l);line-height:1.65}
+
+        /* ---- WHO ---- */
+        .who-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+        .who-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:26px 22px;display:flex;align-items:center;gap:14px;transition:all .2s}
+        .who-card:hover{border-color:rgba(249,115,22,.4);background:#1d1d1d;transform:translateY(-2px)}
+        .who-ico{font-size:26px;flex-shrink:0}
+        .who-name{font-family:var(--font-h);font-weight:700;font-size:17px;text-transform:uppercase;line-height:1.1}
+
+        /* ---- WHY ---- */
+        .why{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+        .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+        .why-card{background:var(--card);padding:34px 26px;transition:background .2s}
+        .why-card:hover{background:#1d1d1d}
+        .why-ico{width:42px;height:42px;background:rgba(249,115,22,.07);border:1px solid rgba(249,115,22,.14);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:14px}
+        .why-title{font-family:var(--font-h);font-weight:800;font-size:17px;text-transform:uppercase;margin-bottom:7px}
+        .why-desc{font-size:13px;color:var(--grey);line-height:1.65}
+
+        /* ---- CTA ---- */
+        .cta-sec{
+            background:linear-gradient(135deg,#160800 0%,#0d0d0d 45%,#080e00 100%);
+            border-top:1px solid var(--border);text-align:center;padding:120px 24px;position:relative;overflow:hidden;
+        }
+        .cta-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 55% at 50% 50%,rgba(249,115,22,.07) 0%,transparent 70%)}
+        .cta-h{font-family:var(--font-h);font-weight:900;font-size:clamp(50px,7vw,96px);text-transform:uppercase;line-height:.92;margin-bottom:22px;position:relative}
+        .cta-h em{color:var(--accent);font-style:normal}
+        .cta-p{font-size:16px;color:var(--grey-l);max-width:500px;margin:0 auto 40px;line-height:1.72;position:relative}
+        .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative}
+        .cta-note{margin-top:18px;font-size:12.5px;color:#555;position:relative}
+
+        /* ---- FOOTER ---- */
+        .footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 140px}
+        .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
+        .f-logo{font-family:var(--font-h);font-weight:900;font-size:20px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+        .f-logo em{color:var(--accent);font-style:normal}
+        .f-desc{font-size:13.5px;color:var(--grey);line-height:1.72;margin-bottom:18px;max-width:320px}
+        .f-wapp{display:inline-flex;align-items:center;gap:8px;color:var(--wapp);text-decoration:none;font-family:var(--font-h);font-weight:900;font-size:22px;transition:opacity .2s;margin-bottom:8px}
+        .f-wapp:hover{opacity:.8}
+        .f-phone{display:flex;align-items:center;gap:6px;color:#3a3a3a;text-decoration:none;font-size:13px;transition:color .2s;margin-top:4px}
+        .f-phone:hover{color:#555}
+        .disclaimer{font-size:12px;color:#404040;background:#0d0d0d;border:1px solid #1a1a1a;border-radius:4px;padding:12px 16px;margin-top:18px;line-height:1.6}
+        .f-hdg{font-family:var(--font-h);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:#555;margin-bottom:14px}
+        .f-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+        .f-list li{font-size:13px;color:#4a4a4a;display:flex;align-items:center;gap:8px}
+        .f-list li::before{content:'';width:3px;height:3px;background:var(--accent);border-radius:50%;flex-shrink:0}
+        .footer-btm{max-width:1200px;margin:40px auto 0;padding-top:22px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+        .footer-btm p{font-size:11px;color:#383838}
+
+        /* ---- STICKY BAR ---- */
+        .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:999;background:rgba(10,10,10,.98);backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:10px 14px;display:flex;gap:8px}
+        .sticky-bar .btn-wapp{flex:1;justify-content:center;padding:13px;font-size:15px}
+        .sticky-bar .btn-ghost{padding:13px 14px;font-size:11px;flex-shrink:0}
+        @media(min-width:768px){.sticky-bar{display:none}}
+
+        /* ---- SCROLL ANIM ---- */
+        .fu{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+        .fu.vis{opacity:1;transform:translateY(0)}
+        .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+        /* ---- RESPONSIVE ---- */
+        @media(max-width:1024px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:768px){
+            .hero-inner{grid-template-columns:1fr;gap:40px;text-align:center}
+            .tyre-wrap{order:-1}.tyre-container{max-width:260px}
+            .hero-sub,.hero-ctas,.hero-stats{margin-left:auto;margin-right:auto}
+            .hero-ctas,.hero-stats{justify-content:center}
+            .steps{grid-template-columns:1fr}
+            .why-grid{grid-template-columns:1fr 1fr}
+            .footer-inner{grid-template-columns:1fr;gap:32px}
+            .footer-btm{flex-direction:column;align-items:flex-start}
+            .section{padding:72px 24px}
+        }
+        @media(max-width:520px){.why-grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+    <a href="#" class="nav-logo">Trade <em>Tyre</em> Supply</a>
+    <div class="nav-right">
+        <span class="nav-location">Acton, W3 · West London</span>
+        <a href="https://wa.me/447440291715" class="btn btn-wapp" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.528 5.847L0 24l6.335-1.652A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.773 9.773 0 01-5.012-1.38l-.36-.214-3.732.979 1.004-3.645-.235-.375A9.77 9.77 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+            WhatsApp Us
+        </a>
+    </div>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker">
+    <div class="ticker-inner">
+        <span class="ticker-item">Trade-Only Tyre Supply</span>
+        <span class="ticker-item">West London · Acton W3</span>
+        <span class="ticker-item">Quality Used Tyres</span>
+        <span class="ticker-item">Selected New Tyres Available</span>
+        <span class="ticker-item">Fast Collection</span>
+        <span class="ticker-item">Out-of-Hours Service</span>
+        <span class="ticker-item">Mobile Fitters Welcome</span>
+        <span class="ticker-item">WhatsApp Your Tyre Size</span>
+        <span class="ticker-item">Trade-Only Tyre Supply</span>
+        <span class="ticker-item">West London · Acton W3</span>
+        <span class="ticker-item">Quality Used Tyres</span>
+        <span class="ticker-item">Selected New Tyres Available</span>
+        <span class="ticker-item">Fast Collection</span>
+        <span class="ticker-item">Out-of-Hours Service</span>
+        <span class="ticker-item">Mobile Fitters Welcome</span>
+        <span class="ticker-item">WhatsApp Your Tyre Size</span>
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+        <div class="hero-content">
+            <div class="hero-badge fu">Acton, West London · W3 7QS</div>
+            <h1 class="hero-h1 fu d1">
+                Trade Tyre<br>
+                Supply for<br>
+                <em>Mobile Fitters</em>
+            </h1>
+            <p class="hero-sub fu d2">Quality used tyres and selected new tyres available for fast trade collection in Acton, West London. Built for mobile fitters, garages and roadside tyre services who need stock quickly.</p>
+            <div class="hero-ctas fu d3">
+                <a href="https://wa.me/447440291715" class="btn btn-wapp btn-lg" target="_blank" rel="noopener noreferrer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.528 5.847L0 24l6.335-1.652A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.773 9.773 0 01-5.012-1.38l-.36-.214-3.732.979 1.004-3.645-.235-.375A9.77 9.77 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+                    WhatsApp Us Now
+                </a>
+                <a href="tel:+447440291715" class="btn btn-call-discreet">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    Call
+                </a>
+            </div>
+            <div class="hero-stats fu d4">
+                <div><div class="stat-val">24/7</div><div class="stat-lbl">Out-of-Hours</div></div>
+                <div><div class="stat-val">W3</div><div class="stat-lbl">Acton, London</div></div>
+                <div><div class="stat-val">Trade</div><div class="stat-lbl">Only Supply</div></div>
+            </div>
+        </div>
+        <div class="tyre-wrap fu d2">
+            <div class="tyre-container">
+                <div class="tyre-glow"></div>
+                <canvas id="tyreCanvas" width="500" height="500"></canvas>
+                <div class="scroll-hint">Scroll to spin</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how" id="how">
+    <div class="s-inner">
+        <div class="s-hdr fu">
+            <div class="s-label">Simple Process</div>
+            <h2 class="s-title">How It Works</h2>
+            <p class="s-sub">Getting tyre stock is fast and straightforward. No middlemen, no delays.</p>
+        </div>
+        <div class="steps">
+            <div class="step fu">
+                <div class="step-n">01</div>
+                <div class="step-ico">📏</div>
+                <div class="step-lbl">Step 1</div>
+                <h3 class="step-title">Send Us the Tyre Size</h3>
+                <p class="step-desc">WhatsApp us the exact tyre size — width, profile, rim size. Example: 205/55 R16. We'll take it from there.</p>
+            </div>
+            <div class="step fu d1">
+                <div class="step-n">02</div>
+                <div class="step-ico">✅</div>
+                <div class="step-lbl">Step 2</div>
+                <h3 class="step-title">We Confirm Stock</h3>
+                <p class="step-desc">We confirm availability, brand, tread depth and price immediately. No waiting around, no guesswork.</p>
+            </div>
+            <div class="step fu d2">
+                <div class="step-n">03</div>
+                <div class="step-ico">🚗</div>
+                <div class="step-lbl">Step 3</div>
+                <h3 class="step-title">Collect &amp; Get Back to Work</h3>
+                <p class="step-desc">Collect from Acton W3 and get straight back on the road. Fast turnaround so you can focus on your jobs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHO WE SUPPLY -->
+<section class="section" id="who">
+    <div class="s-inner">
+        <div class="s-hdr fu">
+            <div class="s-label">Trade Only</div>
+            <h2 class="s-title">Who We Supply</h2>
+            <p class="s-sub">We supply tyre professionals across London who need reliable stock fast.</p>
+        </div>
+        <div class="who-grid">
+            <div class="who-card fu"><div class="who-ico">🔧</div><div class="who-name">Mobile Tyre Fitters</div></div>
+            <div class="who-card fu d1"><div class="who-ico">🏢</div><div class="who-name">Mobile Tyre Companies</div></div>
+            <div class="who-card fu d2"><div class="who-ico">🔩</div><div class="who-name">Garages</div></div>
+            <div class="who-card fu d3"><div class="who-ico">🚛</div><div class="who-name">Recovery Drivers</div></div>
+            <div class="who-card fu d1"><div class="who-ico">🛣️</div><div class="who-name">Roadside Assistance</div></div>
+            <div class="who-card fu d2"><div class="who-ico">🚘</div><div class="who-name">Fleet Support Operators</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY TRADE TYRE SUPPLY -->
+<section class="section why" id="why">
+    <div class="s-inner">
+        <div class="s-hdr fu">
+            <div class="s-label">Our Edge</div>
+            <h2 class="s-title">Why Trade Tyre Supply</h2>
+            <p class="s-sub">Everything we do is built around what trade professionals actually need.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card fu">
+                <div class="why-ico">⚡</div>
+                <h3 class="why-title">Fast Response</h3>
+                <p class="why-desc">We reply fast on WhatsApp. When you're on a job and need stock urgently, every minute counts.</p>
+            </div>
+            <div class="why-card fu d1">
+                <div class="why-ico">🎯</div>
+                <h3 class="why-title">Trade-Focused</h3>
+                <p class="why-desc">Trade-only service built around the pressures of mobile fitting and roadside work.</p>
+            </div>
+            <div class="why-card fu d2">
+                <div class="why-ico">✔️</div>
+                <h3 class="why-title">Quality Used Tyres</h3>
+                <p class="why-desc">Every used tyre is checked for quality, safety and tread depth before we supply it.</p>
+            </div>
+            <div class="why-card fu d3">
+                <div class="why-ico">🆕</div>
+                <h3 class="why-title">New Tyres Available</h3>
+                <p class="why-desc">Selected new tyre stock available when you need premium or a specific size covered.</p>
+            </div>
+            <div class="why-card fu">
+                <div class="why-ico">🌙</div>
+                <h3 class="why-title">Out-of-Hours</h3>
+                <p class="why-desc">Late-night jobs don't wait. We offer out-of-hours availability for when you need it most.</p>
+            </div>
+            <div class="why-card fu d1">
+                <div class="why-ico">🏎️</div>
+                <h3 class="why-title">Fast Collection</h3>
+                <p class="why-desc">Turn up and collect from Acton W3. No lengthy waits. Fast, efficient handover for trade customers.</p>
+            </div>
+            <div class="why-card fu d2">
+                <div class="why-ico">📦</div>
+                <h3 class="why-title">Reliable Stock</h3>
+                <p class="why-desc">Consistent stock across common sizes. We keep the sizes you need available.</p>
+            </div>
+            <div class="why-card fu d3">
+                <div class="why-ico">📍</div>
+                <h3 class="why-title">West London Based</h3>
+                <p class="why-desc">Based in Acton, West London W3 — central location, easy access for trade across the city.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-sec" id="contact">
+    <h2 class="cta-h fu">
+        Need a<br><em>Tyre Now?</em>
+    </h2>
+    <p class="cta-p fu d1">WhatsApp us the tyre size and we'll confirm availability immediately. Trade-only. Fast response. Out-of-hours available.</p>
+    <div class="cta-btns fu d2">
+        <a href="https://wa.me/447440291715" class="btn btn-wapp btn-xl" target="_blank" rel="noopener noreferrer">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.528 5.847L0 24l6.335-1.652A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.773 9.773 0 01-5.012-1.38l-.36-.214-3.732.979 1.004-3.645-.235-.375A9.77 9.77 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+            WhatsApp Us Now
+        </a>
+    </div>
+    <p class="cta-note fu d3">Send us the size — e.g. 205/55 R16 — and we'll confirm stock straight away.</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div>
+            <div class="f-logo">Trade <em>Tyre</em> Supply</div>
+            <p class="f-desc">Trade-only tyre supplier based in Acton, West London W3 7QS. Quality used tyres and selected new tyres for mobile tyre fitters, garages, recovery drivers and roadside tyre services.</p>
+            <a href="https://wa.me/447440291715" class="f-wapp" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.528 5.847L0 24l6.335-1.652A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.773 9.773 0 01-5.012-1.38l-.36-.214-3.732.979 1.004-3.645-.235-.375A9.77 9.77 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+                +44 7440 291715
+            </a>
+            <a href="tel:+447440291715" class="f-phone">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                or call +44 7440 291715
+            </a>
+            <div class="disclaimer">Trade-only tyre supply. We do not offer a public tyre fitting service and do not fit tyres. Collection only. Trade customers only. Acton, West London W3 7QS.</div>
+        </div>
+        <div>
+            <div class="f-hdg">Services</div>
+            <ul class="f-list">
+                <li>Quality Used Tyres</li>
+                <li>Selected New Tyres</li>
+                <li>Fast Collection</li>
+                <li>Out-of-Hours Supply</li>
+                <li>Trade Stock Supply</li>
+            </ul>
+        </div>
+        <div>
+            <div class="f-hdg">Trade Customers</div>
+            <ul class="f-list">
+                <li>Mobile Tyre Fitters</li>
+                <li>Garages</li>
+                <li>Recovery Drivers</li>
+                <li>Fleet Support</li>
+                <li>Roadside Assistance</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-btm">
+        <p>© 2024 Trade Tyre Supply. Acton, West London W3 7QS. All rights reserved.</p>
+        <p>trade tyre supply West London · mobile tyre fitter supplier Acton · used tyres trade W3 · tyre collection London</p>
+    </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar">
+    <a href="https://wa.me/447440291715" class="btn btn-wapp" target="_blank" rel="noopener noreferrer">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.528 5.847L0 24l6.335-1.652A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.773 9.773 0 01-5.012-1.38l-.36-.214-3.732.979 1.004-3.645-.235-.375A9.77 9.77 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        WhatsApp Now — Send Tyre Size
+    </a>
+    <a href="tel:+447440291715" class="btn btn-ghost">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call
+    </a>
+</div>
+
+<script>
+(function(){
+    // =============================================
+    // TYRE CANVAS — Premium scroll-driven wheel
+    // =============================================
+    const canvas = document.getElementById('tyreCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const SIZE = 500;
+    canvas.width  = SIZE * dpr;
+    canvas.height = SIZE * dpr;
+    canvas.style.width  = SIZE + 'px';
+    canvas.style.height = SIZE + 'px';
+    ctx.scale(dpr, dpr);
+
+    const CX = SIZE / 2, CY = SIZE / 2;
+    const R_OUT  = 228;  // outer tyre radius
+    const R_SW   = 176;  // tread root / sidewall outer
+    const R_BEAD = 158;  // bead seat
+    const R_RIM  = 148;  // rim outer face
+    const R_DISH = 105;  // spoke connects here at rim
+    const R_HUB  = 44;   // hub barrel
+    const R_BOLT = 28;   // bolt circle radius
+    const R_CAP  = 17;   // center cap
+
+    function drawTyre(rot) {
+        ctx.clearRect(0, 0, SIZE, SIZE);
+        ctx.save();
+        ctx.translate(CX, CY);
+        ctx.rotate(rot);
+        ctx.translate(-CX, -CY);
+
+        // ── OUTER RUBBER BODY ──
+        const rubberG = ctx.createRadialGradient(CX-55, CY-55, 10, CX, CY, R_OUT);
+        rubberG.addColorStop(0,   '#282828');
+        rubberG.addColorStop(0.5, '#1b1b1b');
+        rubberG.addColorStop(1,   '#0e0e0e');
+        ctx.beginPath();
+        ctx.arc(CX, CY, R_OUT, 0, Math.PI*2);
+        ctx.fillStyle = rubberG;
+        ctx.fill();
+
+        // ── TREAD BLOCKS ──
+        const BLOCKS = 80;
+        const bAng   = (Math.PI*2) / BLOCKS;
+        for (let i = 0; i < BLOCKS; i++) {
+            const a      = i * bAng;
+            const isMain = (i % 4 !== 2);
+            const gap    = bAng * 0.09;
+            const inner  = isMain ? R_SW + 2 : R_SW + 16;
+
+            ctx.beginPath();
+            ctx.arc(CX, CY, R_OUT - 2, a + gap, a + bAng - gap);
+            ctx.arc(CX, CY, inner, a + bAng - gap, a + gap, true);
+            ctx.closePath();
+
+            const bg = ctx.createRadialGradient(CX, CY, inner, CX, CY, R_OUT);
+            bg.addColorStop(0,   isMain ? '#232323' : '#1c1c1c');
+            bg.addColorStop(0.6, isMain ? '#1d1d1d' : '#181818');
+            bg.addColorStop(1,   '#111111');
+            ctx.fillStyle = bg;
+            ctx.fill();
+        }
+
+        // ── CIRCUMFERENTIAL GROOVES ──
+        [R_SW+18, R_SW+34, R_SW+50].forEach(r => {
+            ctx.beginPath();
+            ctx.arc(CX, CY, r, 0, Math.PI*2);
+            ctx.strokeStyle = '#090909';
+            ctx.lineWidth = 2.5;
+            ctx.stroke();
+        });
+
+        // ── LATERAL SIPES ──
+        for (let i = 0; i < 32; i++) {
+            const ang = (i / 32) * Math.PI * 2;
+            ctx.beginPath();
+            ctx.moveTo(CX + (R_SW+4)*Math.cos(ang),  CY + (R_SW+4)*Math.sin(ang));
+            ctx.lineTo(CX + (R_OUT-6)*Math.cos(ang), CY + (R_OUT-6)*Math.sin(ang));
+            ctx.strokeStyle = '#080808';
+            ctx.lineWidth   = 2.2;
+            ctx.stroke();
+        }
+
+        // ── TYRE EDGE ──
+        ctx.beginPath();
+        ctx.arc(CX, CY, R_OUT, 0, Math.PI*2);
+        ctx.strokeStyle = '#2e2e2e';
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+
+        // ── SIDEWALL ──
+        const swG = ctx.createRadialGradient(CX-38, CY-38, 40, CX, CY, R_SW+2);
+        swG.addColorStop(0,   '#222222');
+        swG.addColorStop(0.7, '#1a1a1a');
+        swG.addColorStop(1,   '#141414');
+        ctx.beginPath();
+        ctx.arc(CX, CY, R_SW, 0, Math.PI*2);
+        ctx.fillStyle = swG;
+        ctx.fill();
+
+        for (let r = R_BEAD+6; r < R_SW-6; r += 10) {
+            ctx.beginPath();
+            ctx.arc(CX, CY, r, 0, Math.PI*2);
+            ctx.strokeStyle = 'rgba(255,255,255,0.022)';
+            ctx.lineWidth   = 1;
+            ctx.stroke();
+        }
+
+        // ── BEAD SEAT ──
+        ctx.beginPath();
+        ctx.arc(CX, CY, R_BEAD, 0, Math.PI*2);
+        ctx.strokeStyle = '#3a3a3a';
+        ctx.lineWidth   = 3.5;
+        ctx.stroke();
+
+        // ── RIM OUTER FACE ──
+        const rimG = ctx.createRadialGradient(CX-45, CY-45, 10, CX, CY, R_RIM);
+        rimG.addColorStop(0,   '#5c5c5c');
+        rimG.addColorStop(0.25,'#404040');
+        rimG.addColorStop(0.6, '#2e2e2e');
+        rimG.addColorStop(1,   '#1e1e1e');
+        ctx.beginPath();
+        ctx.arc(CX, CY, R_RIM, 0, Math.PI*2);
+        ctx.fillStyle = rimG;
+        ctx.fill();
+
+        // Rim lip (machined bright edge)
+        ctx.beginPath();
+        ctx.arc(CX, CY, R_RIM, 0, Math.PI*2);
+        ctx.strokeStyle = '#666';
+        ctx.lineWidth   = 1.8;
+        ctx.stroke();
+
+        // Inner rim ring
+        ctx.beginPath();
+        ctx.arc(CX, CY, R_RIM - 10, 0, Math.PI*2);
+        ctx.strokeStyle = '#3a3a3a';
+        ctx.lineWidth   = 1;
+        ctx.stroke();
+
+        // ── CONCAVE DISH BASE (deep dark well between spokes) ──
+        const dishG = ctx.createRadialGradient(CX-20, CY-20, 0, CX, CY, R_DISH+10);
+        dishG.addColorStop(0,   '#181818');
+        dishG.addColorStop(0.6, '#111111');
+        dishG.addColorStop(1,   '#0a0a0a');
+        ctx.beginPath();
+        ctx.arc(CX, CY, R_DISH, 0, Math.PI*2);
+        ctx.fillStyle = dishG;
+        ctx.fill();
+
+        // ── PORSCHE/MERCEDES 5-SPOKE TURBINE FAN DESIGN ──
+        // Each spoke is asymmetric — wider sweep on the leading edge
+        // creating a premium fan/turbine blade appearance
+        const SPOKES = 5;
+        for (let i = 0; i < SPOKES; i++) {
+            const cAng = (i / SPOKES) * Math.PI * 2 - Math.PI / 2;
+
+            // Asymmetric hub ends
+            const hL = cAng - 0.19;
+            const hR = cAng + 0.19;
+            // Rim ends — leading edge fans wider (turbine sweep)
+            const rL = cAng - 0.34;
+            const rR = cAng + 0.13;
+
+            const pHL = [CX + (R_HUB+5)*Math.cos(hL), CY + (R_HUB+5)*Math.sin(hL)];
+            const pHR = [CX + (R_HUB+5)*Math.cos(hR), CY + (R_HUB+5)*Math.sin(hR)];
+            const pRL = [CX + (R_DISH-4)*Math.cos(rL), CY + (R_DISH-4)*Math.sin(rL)];
+            const pRR = [CX + (R_DISH-4)*Math.cos(rR), CY + (R_DISH-4)*Math.sin(rR)];
+
+            // Bezier control points — left edge sweeps outward elegantly
+            const midR = (R_HUB + R_DISH) * 0.52;
+            const cpLx = CX + midR * Math.cos(cAng - 0.30);
+            const cpLy = CY + midR * Math.sin(cAng - 0.30);
+            const cpRx = CX + midR * Math.cos(cAng + 0.11);
+            const cpRy = CY + midR * Math.sin(cAng + 0.11);
+
+            // Draw spoke shape
+            ctx.beginPath();
+            ctx.moveTo(pHL[0], pHL[1]);
+            ctx.quadraticCurveTo(cpLx, cpLy, pRL[0], pRL[1]);
+            ctx.arc(CX, CY, R_DISH-4, rL, rR);
+            ctx.quadraticCurveTo(cpRx, cpRy, pHR[0], pHR[1]);
+            ctx.arc(CX, CY, R_HUB+5, hR, hL, true);
+            ctx.closePath();
+
+            // Gradient: bright machined face grading to gunmetal
+            const gx = CX + (R_HUB+10)*Math.cos(cAng - 0.05);
+            const gy = CY + (R_HUB+10)*Math.sin(cAng - 0.05);
+            const gx2= CX + (R_DISH-10)*Math.cos(cAng - 0.15);
+            const gy2= CY + (R_DISH-10)*Math.sin(cAng - 0.15);
+            const sg = ctx.createLinearGradient(gx, gy, gx2, gy2);
+            sg.addColorStop(0,    '#626262');
+            sg.addColorStop(0.18, '#525252');
+            sg.addColorStop(0.55, '#3e3e3e');
+            sg.addColorStop(0.85, '#2e2e2e');
+            sg.addColorStop(1,    '#252525');
+            ctx.fillStyle = sg;
+            ctx.fill();
+
+            // Outer spoke border
+            ctx.strokeStyle = '#5a5a5a';
+            ctx.lineWidth   = 0.6;
+            ctx.stroke();
+
+            // ── Machined leading-edge highlight ──
+            ctx.beginPath();
+            ctx.moveTo(pHL[0], pHL[1]);
+            ctx.quadraticCurveTo(cpLx, cpLy, pRL[0], pRL[1]);
+            ctx.strokeStyle = 'rgba(255,255,255,0.28)';
+            ctx.lineWidth   = 1.8;
+            ctx.stroke();
+
+            // ── Trailing-edge shadow line ──
+            ctx.beginPath();
+            ctx.moveTo(pHR[0], pHR[1]);
+            ctx.quadraticCurveTo(cpRx, cpRy, pRR[0], pRR[1]);
+            ctx.strokeStyle = 'rgba(0,0,0,0.65)';
+            ctx.lineWidth   = 1.6;
+            ctx.stroke();
+
+            // ── Subtle centre groove down spoke face ──
+            const grooveMidAng = cAng - 0.07;
+            ctx.beginPath();
+            ctx.moveTo(CX + (R_HUB+8)*Math.cos(grooveMidAng), CY + (R_HUB+8)*Math.sin(grooveMidAng));
+            ctx.lineTo(CX + (R_DISH-10)*Math.cos(grooveMidAng - 0.06), CY + (R_DISH-10)*Math.sin(grooveMidAng - 0.06));
+            ctx.strokeStyle = 'rgba(0,0,0,0.35)';
+            ctx.lineWidth   = 2;
+            ctx.stroke();
+        }
+
+        // Spoke pockets — dark fill between spokes (reinforces depth)
+        for (let i = 0; i < SPOKES; i++) {
+            const cAng    = (i / SPOKES) * Math.PI * 2 - Math.PI / 2;
+            const nextAng = ((i+1) / SPOKES) * Math.PI * 2 - Math.PI / 2;
+            const pStart  = cAng + 0.14;    // right edge of current spoke
+            const pEnd    = nextAng - 0.35; // left edge of next spoke
+
+            ctx.beginPath();
+            ctx.moveTo(CX + (R_HUB+6)*Math.cos(pStart), CY + (R_HUB+6)*Math.sin(pStart));
+            ctx.arc(CX, CY, R_DISH-5, pStart, pEnd);
+            ctx.arc(CX, CY, R_HUB+6, pEnd, pStart, true);
+            ctx.closePath();
+            ctx.fillStyle = '#0b0b0b';
+            ctx.fill();
+        }
+
+        // ── RIM OUTER CHANNEL RING (at spoke-to-rim junction) ──
+        ctx.beginPath();
+        ctx.arc(CX, CY, R_DISH+6, 0, Math.PI*2);
+        ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+        ctx.lineWidth   = 1;
+        ctx.stroke();
+
+        // ── HUB BARREL ──
+        const hubG = ctx.createRadialGradient(CX-12, CY-12, 2, CX, CY, R_HUB);
+        hubG.addColorStop(0,   '#686868');
+        hubG.addColorStop(0.4, '#484848');
+        hubG.addColorStop(1,   '#282828');
+        ctx.beginPath();
+        ctx.arc(CX, CY, R_HUB, 0, Math.PI*2);
+        ctx.fillStyle = hubG;
+        ctx.fill();
+        ctx.strokeStyle = '#686868';
+        ctx.lineWidth   = 1.8;
+        ctx.stroke();
+
+        // ── WHEEL BOLTS (5) ──
+        for (let i = 0; i < 5; i++) {
+            const ba = (i / 5) * Math.PI * 2 - Math.PI / 2;
+            const bx = CX + R_BOLT * Math.cos(ba);
+            const by = CY + R_BOLT * Math.sin(ba);
+
+            // Recess
+            const boltG = ctx.createRadialGradient(bx-2, by-2, 1, bx, by, 7);
+            boltG.addColorStop(0, '#1a1a1a');
+            boltG.addColorStop(1, '#090909');
+            ctx.beginPath();
+            ctx.arc(bx, by, 7, 0, Math.PI*2);
+            ctx.fillStyle = boltG;
+            ctx.fill();
+            ctx.strokeStyle = '#505050';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            // Bolt head
+            const bhG = ctx.createRadialGradient(bx-1.5, by-1.5, 0.5, bx, by, 4.5);
+            bhG.addColorStop(0, '#909090');
+            bhG.addColorStop(1, '#444444');
+            ctx.beginPath();
+            ctx.arc(bx, by, 4.5, 0, Math.PI*2);
+            ctx.fillStyle = bhG;
+            ctx.fill();
+        }
+
+        // ── CENTER CAP (flush, no logos) ──
+        const capG = ctx.createRadialGradient(CX-5, CY-5, 1, CX, CY, R_CAP);
+        capG.addColorStop(0,   '#8a8a8a');
+        capG.addColorStop(0.4, '#606060');
+        capG.addColorStop(1,   '#303030');
+        ctx.beginPath();
+        ctx.arc(CX, CY, R_CAP, 0, Math.PI*2);
+        ctx.fillStyle = capG;
+        ctx.fill();
+        ctx.strokeStyle = '#787878';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+
+        // Subtle cap inner ring (premium detail)
+        ctx.beginPath();
+        ctx.arc(CX, CY, R_CAP - 5, 0, Math.PI*2);
+        ctx.strokeStyle = 'rgba(255,255,255,0.1)';
+        ctx.lineWidth = 0.8;
+        ctx.stroke();
+
+        // ── SPECULAR SHEEN ──
+        const sheen = ctx.createRadialGradient(CX-90, CY-90, 0, CX-50, CY-50, 200);
+        sheen.addColorStop(0,   'rgba(255,255,255,0.06)');
+        sheen.addColorStop(0.5, 'rgba(255,255,255,0.02)');
+        sheen.addColorStop(1,   'rgba(255,255,255,0)');
+        ctx.beginPath();
+        ctx.arc(CX, CY, R_OUT, 0, Math.PI*2);
+        ctx.fillStyle = sheen;
+        ctx.fill();
+
+        ctx.restore();
+    }
+
+    // Initial draw
+    drawTyre(0);
+
+    // ── SCROLL-DRIVEN ROTATION (smooth lerp) ──
+    let target = 0, current = 0;
+
+    window.addEventListener('scroll', function(){
+        target = window.scrollY * 0.009;
+    }, { passive: true });
+
+    (function loop(){
+        current += (target - current) * 0.07;
+        drawTyre(current);
+        requestAnimationFrame(loop);
+    })();
+
+    // =============================================
+    // SCROLL FADE-IN
+    // =============================================
+    const io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+            if (e.isIntersecting) e.target.classList.add('vis');
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.hero .fu').forEach(function(el, i){
+        setTimeout(function(){ el.classList.add('vis'); }, 120 + i * 80);
+    });
+
+    document.querySelectorAll('.section .fu, .cta-sec .fu').forEach(function(el){
+        io.observe(el);
+    });
+
+})();
+</script>
+</body>
+</html>
